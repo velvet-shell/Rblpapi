@@ -296,14 +296,14 @@ RblpapiT fieldInfoToRblpapiT(const std::string& datatype, const std::string& fty
   case DatatypeT::Float:
     return RblpapiT::Float;
     break;
-  case DatatypeT::Datetime:
-    if(ftype=="Date") {
-      return RblpapiT::Date;
-    } else {
-      // ftype in ("Time","DateOrTime")
-      return RblpapiT::String;
-    }
-    break;
+  // case DatatypeT::Datetime:
+  //   if(ftype=="Date") {
+  //     return RblpapiT::Date;
+  //   } else {
+  //     // ftype in ("Time","DateOrTime")
+  //     return RblpapiT::String;
+  //   }
+  //   break;
   default:
     // just try to return it as a string
     return RblpapiT::String;
